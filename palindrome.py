@@ -1,11 +1,16 @@
+def sentence_converter(sentence):
+    sentence = sentence.replace(" ", "")
+    return sentence
+
+
 def convert(string):
     list1 = []
     list1[:0] = string
     return list1
 
-text = str(input("give me a word: "))
-whole = convert(text)
-print(whole)
+text = str(input("give me a sentence: "))
+whole = sentence_converter(text)
+whole = convert(whole)
 length = len(whole)
 if length > 3:
     middle_len = length//2
